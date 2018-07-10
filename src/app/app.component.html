@@ -1,16 +1,19 @@
-<header class="header-container">
-  <div class="logo">
-    <h1>Rule of Thumb</h1>
+<div class="app-container">
+  <header class="header-container">
+    <div class="logo" >
+        <a routerLink="[/voting]" routerLinkActive="active">Rule of Thumb</a>
+    </div>
+    <nav>
+      <ul>
+        <li *ngFor="let item of navigation">
+          <a [routerLink]="[item.link]" routerLinkActive="active">{{item.label}}</a>
+        </li>
+        <li>Lupa</li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main-container">
+    <router-outlet></router-outlet>
   </div>
-  <nav>
-    <ul>
-      <li *ngFor="let item of navigation"><a [routerLink]="[item.link]" routerLinkActive="active">{{item.label}}</a></li>
-      <li>Lupa</li>
-    </ul>
-  </nav>
-</header>
-<div class="main-container">
-  <router-outlet></router-outlet>
+  <footer>Hello</footer>
 </div>
-
-<footer>Hello</footer>

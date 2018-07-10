@@ -1,0 +1,48 @@
+.app-container {
+  width:100%;
+  margin:0 auto;
+  text-align:center;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+ }
+ .logo a {
+   text-decoration: none;
+   color: #ffffff;
+   font-size: 2em;
+   display: block;
+   padding: 1em 0 0 0; 
+ }
+ nav {
+  margin: 1.5em 0 0 5%;
+ }
+ header ul li {
+  display: inline-block;
+  padding: 0 1.4em 0 0;
+  font-size: 0.9em;
+ }
+ header ul li a {
+  text-decoration: none;
+  color: #f8eded;
+ }
+ header ul li a.active {
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  font-weight: 300;
+ }
+ header ul li a:hover {
+  color: #ff0000;
+ }
+
+ @media screen and (min-width : 600px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav {
+    align-self: center;
+  }
+ }
