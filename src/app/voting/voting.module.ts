@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { SharedModule } from '@app/shared';
+
+import { VotingRoutingModule } from './voting-routing.module';
 import { VotingComponent } from './voting/voting.component';
+import { CurrentVotingComponent } from './current-voting/current-voting.component';
+
 
 @NgModule({
   imports: [
-    CommonModule
+    SharedModule,
+    VotingRoutingModule
   ],
-  declarations: [VotingComponent]
+  declarations: [VotingComponent, CurrentVotingComponent]
 })
 export class VotingModule { }

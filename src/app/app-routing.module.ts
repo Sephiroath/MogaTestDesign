@@ -8,7 +8,7 @@ const routes: Routes = [{
 },
 {
   path: 'voting',
-  loadChildren: 'app/voting/voting.module#VotingModule'
+  loadChildren: './voting/voting.module#VotingModule'
 },
 {
   path: '**',
