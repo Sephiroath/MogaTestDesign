@@ -11,7 +11,7 @@
             <a [routerLink]="[item.link]" routerLinkActive="active">{{item.label}}</a>
           </li>
           <li>
-            <i class="fa fa-search"></i>            
+            <i class="fa fa-search"></i>
           </li>
         </ul>
       </nav>
@@ -21,5 +21,21 @@
     <div class="blur-content-nav"></div>
     <router-outlet></router-outlet>
   </div>
-  <footer>Hello</footer>
+  <footer>
+    <div class="horizontal-line-container">  
+      <hr/>
+    </div>
+    <div class="footer-container">
+      <div class="us-options">
+        <div>Terms and Conditions</div>
+        <div>Privacy Policy</div>
+        <div>Contact Us</div>
+      </div>
+      <div class="social-options">
+        <div>Follow Us</div>
+        <div><i class="fab fa-facebook fa-2x"></i></div>
+        <div><i class="fab fa-twitter fa-2x"></i></div>
+      </div>
+    </div>
+  </footer>
 </div>

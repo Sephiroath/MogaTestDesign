@@ -37,7 +37,35 @@ $main-background: #000000;
 }
 
 footer {
-  flex-shrink: 0;
+  width: 100%;
+  .horizontal-line-container{  
+    margin: 0 auto;
+    width: 65%;
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px dotted #000000;
+        padding: 0;
+    }
+  }
+  .footer-container{
+    margin: 0 auto;
+    width: 65%;
+    display: flex;
+    .us-options{
+      display: flex;
+      justify-content: space-between;
+      div {
+        margin-right: 20px;
+      }
+    }
+    .social-options{
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 .navigation {

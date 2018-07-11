@@ -2,7 +2,7 @@ $content-width: 1400px;
 $max-width: 65%;
 $item-height: 580px;
 $breakpoint: 799px;
-$higher-breakpoint: 1024px;
+$higher-breakpoint: 1040px;
 
 .other-pools-header {
   text-align: left;
@@ -29,7 +29,7 @@ $higher-breakpoint: 1024px;
 }
 .other-pools-item{
   padding: 5px;
-  width: 40%;
+  width: 45%;
   height: $item-height;
   margin-top: 10px;
   background-position: center;
