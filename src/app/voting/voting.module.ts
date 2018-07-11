@@ -4,6 +4,10 @@ import { SharedModule } from '@app/shared';
 
 import { VotingRoutingModule } from './voting-routing.module';
 import { VotingComponent } from './voting/voting.component';
+import { MainPoolComponent } from './main-pool/main-pool.component';
+import { SpeakOutComponent } from './speak-out/speak-out.component';
+import { OtherPoolsComponent } from './other-pools/other-pools.component';
+import { PoolSuggestionsComponent } from './pool-suggestions/pool-suggestions.component';
 
 
 @NgModule({
@@ -11,6 +15,6 @@ import { VotingComponent } from './voting/voting.component';
     SharedModule,
     VotingRoutingModule
   ],
-  declarations: [VotingComponent]
+  declarations: [VotingComponent, MainPoolComponent, SpeakOutComponent, OtherPoolsComponent, PoolSuggestionsComponent]
 })
 export class VotingModule { }

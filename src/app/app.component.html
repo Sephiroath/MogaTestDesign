@@ -1,23 +1,24 @@
-<div class="app-container">
+<div class="page-container">
   <section class="navigation">
-      <div class="nav-container">
-        <div class="brand">
-            <a routerLink="[./]" routerLinkActive="active">Rule of Thumb</a>
-        </div>
-        <nav>
-          <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-          <ul class="nav-list">
-            <li *ngFor="let item of navigation">
-              <a [routerLink]="[item.link]" routerLinkActive="active">{{item.label}}</a>
-            </li>
-            <li>
-              <i class="fa fa-search"></i>            
-            </li>
-          </ul>
-        </nav>
+    <div class="nav-container">
+      <div class="brand">
+          <a routerLink="[./]" routerLinkActive="active">Rule of Thumb</a>
       </div>
-    </section>
+      <nav>
+        <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+        <ul class="nav-list">
+          <li *ngFor="let item of navigation">
+            <a [routerLink]="[item.link]" routerLinkActive="active">{{item.label}}</a>
+          </li>
+          <li>
+            <i class="fa fa-search"></i>            
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
   <div class="main-container">
+    <div class="blur-content-nav"></div>
     <router-outlet></router-outlet>
   </div>
   <footer>Hello</footer>
