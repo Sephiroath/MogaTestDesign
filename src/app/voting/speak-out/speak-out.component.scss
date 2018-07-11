@@ -1,0 +1,58 @@
+$container-height:140px;
+$content-height:100px;
+$breakpoint: 799px;
+
+.speak-out-container {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  @media screen and (min-width: $breakpoint) {
+    height: $container-height;
+  }
+  @media screen and (max-width: $breakpoint) {
+    height: $container-height -90px !important;
+    width: 100%;
+  }
+  .speak-out {
+    width: 65%;
+    height: $content-height;
+    margin: auto;
+    background-color: #e4e1e1;
+    display: flex;
+    @media screen and (max-width: $breakpoint) {
+      height: $content-height - 50px;
+      width: 100%;
+    }
+    .motto {
+      height: $content-height;
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      text-justify: inter-word;
+      p{
+        margin-top:0;
+        margin-bottom: 0; 
+        margin-left: 0.5em;
+        font-size: 2em;
+        @media only screen and (max-width: $breakpoint) {
+          font-size: 1em;
+        }
+      }
+      strong{
+        font-size: 1.7em;
+        @media only screen and (max-width: $breakpoint) {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .about{
+      $content-height: $content-height;
+      flex-grow: 8;
+    }
+    .cancel{
+      $content-height: $content-height;
+      flex-grow: 1;
+    }
+  }
+}

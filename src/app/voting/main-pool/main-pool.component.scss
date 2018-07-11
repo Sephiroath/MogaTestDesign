@@ -29,6 +29,7 @@ $days-opacity: 0.5;
   @media only screen and (max-width: $breakpoint) {
     width: $pool-width + 20%;
     height: $pool-height + 10%;
+    margin-top: 10%;
   }
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
