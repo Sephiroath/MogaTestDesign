@@ -1,3 +1,8 @@
-<p>
-  other-pools works!
-</p>
+<div class="other-pools-header">
+  <h2>Votes</h2>
+</div>
+<div>
+    <ul class="other-pools-container">
+      <div class="other-pools-item" *ngFor="let poll of polls" [ngStyle]="{ 'background-image': 'url(' + poll.image + ')'}"></div>
+    </ul>
+  </div>

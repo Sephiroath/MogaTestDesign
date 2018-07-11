@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Poll, POLLS } from '@app/Model/poll';
 
 @Component({
   selector: 'app-other-pools',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./other-pools.component.scss']
 })
 export class OtherPoolsComponent implements OnInit {
-
+  polls: Poll[];
   constructor() { }
 
   ngOnInit() {
+    this.getCurrentPolls();
   }
 
+  getCurrentPolls() {
+    this.polls = POLLS;
+  }
 }
