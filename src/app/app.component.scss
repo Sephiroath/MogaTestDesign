@@ -53,6 +53,7 @@ footer {
     margin: 0 auto;
     width: 65%;
     display: flex;
+    opacity: 0.8;
     .us-options{
       display: flex;
       justify-content: space-between;
@@ -64,6 +65,9 @@ footer {
       margin-left: auto;
       display: flex;
       justify-content: space-between;
+      div {
+        margin-right: 20px;
+      }
     }
   }
 }

@@ -1,11 +1,13 @@
 $background-color: #D4C4B5;
 $content-width: 1000px;
-$content-height: 600px;
+$content-height: 700px;
 $breakpoint: 799px;
-$pool-height: 60%;
+$higher-breakpoint: 1040px;
+$pool-height: 420px;
 $pool-width: 25%;
 $days-opacity: 0.5;
-
+$main-text-color: white;
+$thumbs-height: 70px;
 
 .main-pool-container {
   margin: 0 auto;
@@ -26,10 +28,72 @@ $days-opacity: 0.5;
   background-color: #fffffff2;
   margin-left: 18%;
   margin-top: 5%;
-  @media only screen and (max-width: $breakpoint) {
+  text-align: left;
+  color: $main-text-color;
+  display: flex;
+  flex-wrap: wrap;
+  @media only screen and (max-width: $higher-breakpoint) {
     width: $pool-width + 20%;
-    height: $pool-height + 10%;
+    height: $pool-height + 120px;
     margin-top: 10%;
+  }
+  p,
+  h2{
+    width: 100%;
+    @media only screen and (max-width: $higher-breakpoint) {
+      margin: 0;
+    }
+  }
+  .main-pool-prename {
+    margin-bottom: 0;
+  }
+  .main-pool-name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 4em;
+    @media only screen and (max-width: $higher-breakpoint) {
+      font-size: 2em;
+    }
+    @media only screen and (max-width: $breakpoint) {
+      font-size: 1.5em;
+    }
+  }
+  .main-pool-text {
+    margin-right: 15%; 
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+  .thumbs-container{
+    align-self: flex-end;
+    width: 100%;
+    height: $thumbs-height;
+    display: flex;
+    .thumb-up-container,
+    .thumb-down-container{
+      width: 50%;
+      height: $thumbs-height;
+      text-align: center;
+      font-size: 2em;
+      p{
+        opacity: 1;
+        margin-top: 0.5em;
+      }
+    }
+    .thumb-up-container{
+      background-color: rgba(211,211,211,0.3);
+      &:hover{
+        background: rgba(211,211,211,0.7);
+      }
+    }
+    .thumb-down-container{
+      background-color: rgba(255, 255, 0, 0.3);
+      &:hover{
+        background: rgba(255, 255, 0, 0.7);
+      }
+    }
   }
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
