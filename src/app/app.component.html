@@ -9,8 +9,8 @@
       <i class="fas fa-bars" (click)="shouldShowNavBar = !shouldShowNavBar"></i>
     </div>
     <div class="nav-items-container" [ngClass]="{'nav-bar-toggle-show': shouldShowNavBar}">
-      <div *ngFor="let item of navigation" class="nav-bar-link">
-        <a [routerLink]="[item.link]" routerLinkActive="active">{{item.label}}</a>
+      <div *ngFor="let item of navigation" [routerLink]="[item.link]" class="nav-bar-link">
+        <a routerLinkActive="active">{{item.label}}</a>
       </div>
       <div class="nav-bar-link">
         <i class="fa fa-search"></i>
@@ -21,6 +21,27 @@
     <div class="blur-content-nav"></div>
     <router-outlet></router-outlet>
   </div>
+  <footer>
+    <div class="horizontal-line-container">
+      <hr/>
+    </div>
+    <div class="footer-container">
+      <div class="us-options">
+        <div>Terms and Conditions</div>
+        <div>Privacy Policy</div>
+        <div>Contact Us</div>
+      </div>
+      <div class="social-options">
+        <div>Follow Us</div>
+        <div>
+          <i class="fab fa-facebook fa-2x"></i>
+        </div>
+        <div>
+          <i class="fab fa-twitter fa-2x"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
 
 <!--
