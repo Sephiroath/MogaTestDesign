@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Poll, POLLS } from '@app/Model/poll';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-other-pools',
@@ -8,7 +9,7 @@ import { Poll, POLLS } from '@app/Model/poll';
 })
 export class OtherPoolsComponent implements OnInit {
   polls: Poll[];
-  constructor() { }
+  constructor(public snackBar: MatSnackBar, public readonly zone: NgZone) { }
 
   ngOnInit() {
     this.getCurrentPolls();
@@ -28,11 +29,21 @@ export class OtherPoolsComponent implements OnInit {
     poll.isVoteDown = !vote;
   }
   sendVote(poll: Poll) {
+    if (!poll.isVoteUp && !poll.isVoteDown) {
+      this.showNotification('Please select a Vote');
+      return;
+    }
+    this.showNotification('Your vote was Registered');
     poll.isVoted = true;
   }
   voteAgain(poll: Poll) {
     poll.isVoted = false;
     poll.isVoteUp = false;
     poll.isVoteDown = false;
+  }
+  private showNotification(message: string) {
+    this.snackBar.open(message, '', {
+      duration: 2000
+    });
   }
 }
