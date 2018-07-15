@@ -23,4 +23,16 @@ export class OtherPoolsComponent implements OnInit {
     }
     return (100 * votes) / totalVotes;
   }
+  setCurrentVote(poll: Poll, vote: boolean) {
+    poll.isVoteUp = vote;
+    poll.isVoteDown = !vote;
+  }
+  sendVote(poll: Poll) {
+    poll.isVoted = true;
+  }
+  voteAgain(poll: Poll) {
+    poll.isVoted = false;
+    poll.isVoteUp = false;
+    poll.isVoteDown = false;
+  }
 }

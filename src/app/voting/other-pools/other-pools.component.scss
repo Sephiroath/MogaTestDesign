@@ -115,6 +115,9 @@ $thumbs-botton-container-height: 70px;
       @media only screen and (max-width: $breakpoint) {
         width: 100%;
       }
+      .thumb-selected {
+        border: 2px solid white;
+      }
       .thumb-up,
       .thumb-down,
       .thumb-vote {
@@ -154,6 +157,7 @@ $thumbs-botton-container-height: 70px;
         overflow: hidden;
         outline:none;
         font-size: 1em;
+        margin-right: auto;
         &:hover{
           background: $link-hover-color;
         }
