@@ -136,8 +136,8 @@ $thumbs-botton-container-height: 70px;
   }
 }
 .thumbs-container-bottom {
-  background-color: red;
   height: $thumbs-top-container-height;
+  display: flex;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -147,4 +147,19 @@ $thumbs-botton-container-height: 70px;
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
+  .thumb-up,
+  .thumb-down {
+    display: flex;
+    height: 100%;
+  }
+  .thumb-up {
+    background-color: $positive-vote-color;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .thumb-down {
+    background-color: $negative-vote-color;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
