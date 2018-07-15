@@ -106,7 +106,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: $breakpoint) {
   .nav-items-container,
   .nav-bar {
     flex-direction: column;
@@ -129,5 +129,17 @@ footer {
   }
   .content-container {
     margin-top: 0;
+  }
+  footer {
+    .horizontal-line-container {
+      width: 100%;
+    }
+    .footer-container {
+      flex-direction: column;
+      .social-options{
+        margin-top: 8px;
+        margin-left: 0;
+      }
+    }
   }
 }

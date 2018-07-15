@@ -1,3 +1,4 @@
+@import '../../main';
 $background-color: #D4C4B5;
 $content-width: 1000px;
 $content-height: 700px;
@@ -6,7 +7,6 @@ $higher-breakpoint: 1040px;
 $pool-height: 420px;
 $pool-width: 25%;
 $days-opacity: 0.5;
-$main-text-color: white;
 $thumbs-height: 70px;
 
 .main-pool-container {
@@ -113,28 +113,39 @@ $thumbs-height: 70px;
 .missing-days-bar {
   height: 100%;
   flex-grow: 30;
-  background-color: gray;
+  background-color: $days-counter-primary-color;
   opacity: $days-opacity;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   p {
     font-size: 0.8em;
-    color: white;
+    color: $main-text-color;
     margin-right: 1em;
-    margin-top: 1.7em;
   }
 }
 .missing-days-label-container {
   height: 100%;
   flex-grow: 70;
-  background-color: white;
+  background-color: $days-counter-secondary-color;
   opacity: $days-opacity;
-  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   p {
     font-size: 1.5em;
     margin-left: 1em;
-    margin-top: 0.7em;
     em {
       font-weight: bold;
     }
+  }
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 15px solid $days-counter-primary-color;
+    border-bottom: 10px solid transparent;
   }
 }
