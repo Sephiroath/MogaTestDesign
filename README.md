@@ -7,13 +7,14 @@ I am a .NET Developer, but i've always beeen interested in Front End Development
 
 This is actually the first time ever i have worked with:
 - **Media Queries**: I've seen them and i know what they do, but never really used them.
-- **SASS**: I knew CSS preprocessors existed, but i hadn't even looked into them... they are Freaking Awesome.
+- **SASS**: I knew CSS preprocessors existed, but i hadn't even looked into them... they are Freaking Awesome(underused atm).
 - **Flex**: Last time i checked it was really hard doing something remotely responsive without bootstrap (or a lot of code) i started the exercise without even knowing of Flex(not that i am an expert now)... guess i'll try checking CSS Grids when i have the time.
 
 ## Libraries/Frameworks Used:
 - Angular 6
 - Angular CLI
-- Angular Material (for user Notifications)
+- Angular Material (for user Notifications)  
+**Note** : 'Experimental Web Platform features' required to display backdrop-filter
 
 
 ## What do I know then?
