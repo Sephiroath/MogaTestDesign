@@ -1,8 +1,52 @@
 <div class="other-pools-header">
   <h2>Votes</h2>
 </div>
-<div>
-    <ul class="other-pools-container">
-      <div class="other-pools-item" *ngFor="let poll of polls" [ngStyle]="{ 'background-image': 'url(' + poll.image + ')'}"></div>
-    </ul>
+<div class="main-container">
+  <div class="other-poll-container" *ngFor="let poll of polls" [ngStyle]="{ 'background-image': 'url(' + poll.image + ')'}">
+    <div class="poll-container">
+      <div class="thumb-result bg-blue">
+        <div class="thumb bg-red"></div>
+      </div>
+      <div class="poll bg-yellow">
+        <h2 class="width-100-p">Kanye West</h2>
+        <p class="width-100-p">1 month ago in entertainment</p>
+        <p class="width-100-p">vestibulum tortor, nec tempor felis eleifend eu. Nullam vehicula, dolor a blandit mollis, felis augue efficitur leo</p>
+        <div class="thumbs-top-container">
+          <div class="thumb-up bg-yellow"></div>
+          <div class="thumb-down bg-blue"></div>
+          <div class="thumb-vote width-50-p bg-red">Vote</div>
+        </div>
+      </div>
+      <div class="thumbs-container-bottom height-100-px">
+        <div class="width-50-p bg-red height-100-p"></div>
+        <div class="width-50-p bg-blue height-100-p"></div>
+      </div>
+    </div>
   </div>
+</div>
+
+<!--
+<div>
+  <div class="other-pools-container">
+    <div class="other-pools-item" *ngFor="let poll of polls" [ngStyle]="{ 'background-image': 'url(' + poll.image + ')'}">
+
+      <div class="thumb-result bg-blue">
+        <div class="thumb bg-red"></div>
+      </div>
+      <div class="poll bg-yellow">
+        <h2 class="width-100-p">Kanye West</h2>
+        <p class="width-100-p">1 month ago in entertainment</p>
+        <p class="width-100-p">vestibulum tortor, nec tempor felis eleifend eu. Nullam vehicula, dolor a blandit mollis, felis augue efficitur leo</p>
+        <div class="thumbs-top-container">
+          <div class="thumb-up bg-yellow"></div>
+          <div class="thumb-down bg-blue"></div>
+          <div  class="thumb-vote width-50-p bg-red">Vote</div>
+        </div>
+      </div>
+      <div class="thumbs-container-bottom height-100-px">
+        <div class="width-50-p bg-red height-100-p"></div>
+        <div class="width-50-p bg-blue height-100-p"></div>    
+      </div>  
+    </div>
+  </div>
+</div>-->
