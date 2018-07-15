@@ -88,11 +88,23 @@ $item-height: 580px;
     width:25%;
     height:100%;
   }
+  .thumb-up{
+    background-color: $positive-vote-color;
+  }
+  .thumb-down {
+    background-color: $negative-vote-color;
+  }
 }
 .thumbs-container-bottom{
   display: flex;
   width:100%;  
-  height: 30%;
+  height: 31%;
+  .thumb-up{
+    background-color: $positive-vote-color;
+  }
+  .thumb-down {
+    background-color: $negative-vote-color;
+  }
 }
 .poll {
   width:78%;

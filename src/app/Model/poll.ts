@@ -29,8 +29,8 @@ export const POLLS: Poll[] = [
     personDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed felis eu turpis pulvinar laoreet.',
     isVoteUp: false,
     isVoteDown: false,
-    currentVotesUp: 500,
-    currentVotesDown: 420,
+    currentVotesUp: 7,
+    currentVotesDown: 3,
     image: '/assets/MarkV2.jpg'
   },
   {
@@ -40,8 +40,8 @@ export const POLLS: Poll[] = [
     personDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed felis eu turpis pulvinar laoreet.',
     isVoteUp: false,
     isVoteDown: false,
-    currentVotesUp: 500,
-    currentVotesDown: 420,
+    currentVotesUp: 20,
+    currentVotesDown: 100,
     image: '/assets/CristinaKirchnerV2.jpg'
   },
   {
@@ -51,8 +51,8 @@ export const POLLS: Poll[] = [
     personDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed felis eu turpis pulvinar laoreet.',
     isVoteUp: false,
     isVoteDown: false,
-    currentVotesUp: 500,
-    currentVotesDown: 420,
+    currentVotesUp: 15,
+    currentVotesDown: 2,
     image: '/assets/MalalaV2.jpg'
   }
 ];

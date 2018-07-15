@@ -17,4 +17,7 @@ export class OtherPoolsComponent implements OnInit {
   getCurrentPolls() {
     this.polls = POLLS;
   }
+  getCurrentVotesPercentage(totalVotes: number, votes: number) {
+    return (100 * votes) / totalVotes;
+  }
 }
