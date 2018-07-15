@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+## See it alive
+http://sephiroath-001-site3.ctempurl.com
+
 ## So, A little bit of History, and some random justification:
 I am a .NET Developer, but i've always beeen interested in Front End Development, i haven't really done this kind of exercise ever, so i think it might be a little dissapointing...
 
