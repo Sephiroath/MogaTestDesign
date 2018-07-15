@@ -45,6 +45,15 @@ $thumbs-botton-container-height: 70px;
   align-items: flex-end;
   margin-left: 0;
   color: $main-text-color;
+  @media only screen and (max-width: $higher-breakpoint) {
+    width: 70%;
+  }
+  @media only screen and (max-width: $breakpoint) {
+    width: 90%;
+  }
+  @media only screen and (max-width: $lower-breakpoint) {
+    width: 100%;
+  }
 }
 
 .poll-content-container {
@@ -95,11 +104,17 @@ $thumbs-botton-container-height: 70px;
       font-size: 2em;
     }
     .thumbs-top-container {
-      width: 60%;
+      width: 70%;
       height: $thumbs-top-container-height;
       display: flex;
       justify-content: center;
       align-items: center;
+      @media only screen and (max-width: $higher-breakpoint) {
+        width: 80%;
+      }
+      @media only screen and (max-width: $breakpoint) {
+        width: 100%;
+      }
       .thumb-up,
       .thumb-down,
       .thumb-vote {
@@ -131,6 +146,21 @@ $thumbs-botton-container-height: 70px;
       }
       .thumb-vote {
         flex: 0 1 50%;
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border-style: solid;
+        border-width: 1px;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+        font-size: 1em;
+        &:hover{
+          background: $link-hover-color;
+        }
+        @media only screen and (max-width: $higher-breakpoint) {
+          font-size: 1em;
+          padding: 0;
+        }
       }
     }
   }
@@ -151,6 +181,7 @@ $thumbs-botton-container-height: 70px;
   .thumb-down {
     display: flex;
     height: 100%;
+    font-size: 1.5em;
   }
   .thumb-up {
     background-color: $positive-vote-color;
