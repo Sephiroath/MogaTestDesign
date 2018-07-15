@@ -8,6 +8,7 @@ import { MainPoolComponent } from './main-pool/main-pool.component';
 import { SpeakOutComponent } from './speak-out/speak-out.component';
 import { OtherPoolsComponent } from './other-pools/other-pools.component';
 import { PoolSuggestionsComponent } from './pool-suggestions/pool-suggestions.component';
+import { OtherPoolsService } from './other-pools/other-pools.service';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { PoolSuggestionsComponent } from './pool-suggestions/pool-suggestions.co
     SharedModule,
     VotingRoutingModule
   ],
-  declarations: [VotingComponent, MainPoolComponent, SpeakOutComponent, OtherPoolsComponent, PoolSuggestionsComponent]
+  declarations: [VotingComponent, MainPoolComponent, SpeakOutComponent, OtherPoolsComponent, PoolSuggestionsComponent],
+  providers: [OtherPoolsService]
 })
 export class VotingModule { }

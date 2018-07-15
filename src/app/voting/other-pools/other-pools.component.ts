@@ -1,6 +1,7 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Poll, POLLS } from '@app/Model/poll';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { OtherPoolsService } from './other-pools.service';
 
 @Component({
   selector: 'app-other-pools',
@@ -9,14 +10,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class OtherPoolsComponent implements OnInit {
   polls: Poll[];
-  constructor(public snackBar: MatSnackBar, public readonly zone: NgZone) { }
+  constructor(public snackBar: MatSnackBar, public readonly otherPoolsService: OtherPoolsService) { }
 
   ngOnInit() {
     this.getCurrentPolls();
   }
 
   getCurrentPolls() {
-    this.polls = POLLS;
+    this.polls = this.otherPoolsService.getCurrentPools();
   }
   getCurrentVotesPercentage(totalVotes: number, votes: number) {
     if (totalVotes === 0 && votes === 0) {
@@ -34,7 +35,7 @@ export class OtherPoolsComponent implements OnInit {
       return;
     }
     this.showNotification('Your vote was Registered');
-    poll.isVoted = true;
+    this.polls = this.otherPoolsService.votePool(poll);
   }
   voteAgain(poll: Poll) {
     poll.isVoted = false;
