@@ -10,6 +10,12 @@ This is actually the first time ever i have worked with:
 - **SASS**: I knew CSS preprocessors existed, but i hadn't even looked into them... they are Freaking Awesome.
 - **Flex**: Last time i checked it was really hard doing something remotely responsive without bootstrap (or a lot of code) i started the exercise without even knowing of Flex(not that i am an expert now)... guess i'll try checking CSS Grids when i have the time.
 
+## Libraries/Frameworks Used:
+- Angular 6
+- Angular CLI
+- Angular Material (for user Notifications)
+
+
 ## What do I know then?
 Most times i have been given the html/css and i have modified it via JS most times with jQuery or libraries like Knockout, depending on the requirement, I'm a fast learner when it comes to programming so i don't find too much problem changing libraries :D (besides that i have implemented the back-end of the application with .NET(4.5+ or Core)).  
   
@@ -20,11 +26,10 @@ When it comes to Web UI i have always worked with libraries, some of them are:
 And recently Angular Material.
 
 ## What have i been up to?
-Lately i have really been looking into angular 2+ and its best practices... I actually wanted to implement Redux on this exercise... but it would take even longer (might do it tho).
-I Will keep working on this exercise when i have the time, which i don't really have on weekdays.
+Lately i have really been looking into angular 2+ and its best practices... I actually wanted to implement Redux on this exercise... but it would take even longer (might do it later tho).
 
 ## Final Rant
-Working with Text is hard as %^&#%...
+Working with Text is quite hard...
 
 ## Development server
 
@@ -39,11 +44,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
-
+[NOT IMPLEMENTED YET]
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
-
+[NOT IMPLEMENTED YET]
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
