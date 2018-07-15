@@ -8,6 +8,7 @@ export class Poll {
   currentVotesUp: number;
   currentVotesDown: number;
   image: string;
+  isVoted?: boolean;
 }
 
 export const POLLS: Poll[] = [
@@ -25,7 +26,7 @@ export const POLLS: Poll[] = [
   {
     name: 'Kaney West',
     pollSince: '1 month ago',
-    category: 'entertainment',
+    category: 'Politics',
     personDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed felis eu turpis pulvinar laoreet.',
     isVoteUp: false,
     isVoteDown: false,
@@ -34,9 +35,9 @@ export const POLLS: Poll[] = [
     image: '/assets/MarkV2.jpg'
   },
   {
-    name: 'Kaney West',
+    name: 'Cristina Fernandez de Kirchner',
     pollSince: '1 month ago',
-    category: 'entertainment',
+    category: 'Business',
     personDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed felis eu turpis pulvinar laoreet.',
     isVoteUp: false,
     isVoteDown: false,
@@ -45,9 +46,9 @@ export const POLLS: Poll[] = [
     image: '/assets/CristinaKirchnerV2.jpg'
   },
   {
-    name: 'Kaney West',
+    name: 'Malala Yousafzai',
     pollSince: '1 month ago',
-    category: 'entertainment',
+    category: 'Entertainment',
     personDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed felis eu turpis pulvinar laoreet.',
     isVoteUp: false,
     isVoteDown: false,

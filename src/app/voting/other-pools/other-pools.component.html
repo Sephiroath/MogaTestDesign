@@ -6,7 +6,7 @@
     <div class="poll-content-container">
       <div class="thumb-result">
         <div class="thumb">
-          <div *ngIf="getCurrentVotesPercentage(poll.currentVotesUp+poll.currentVotesDown, poll.currentVotesUp)>=50;else thumb_down">
+          <div *ngIf="getCurrentVotesPercentage(poll.currentVotesUp+poll.currentVotesDown, poll.currentVotesUp)>=50; else thumb_down">
             <div class="thumb-up">
               <i class="far fa-thumbs-up"></i>
             </div>
@@ -21,7 +21,12 @@
       <div class="poll">
         <h2 class="width-100-p">{{poll.name}}</h2>
         <p class="width-100-p poll-since">{{poll.pollSince}} in {{poll.category}}</p>
-        <p class="width-100-p">{{poll.personDescription}}</p>
+        <div *ngIf="!poll.isVoted else is_voted">
+          <p class="width-100-p">{{poll.personDescription}}</p>
+        </div>
+        <ng-template #is_voted>
+            <p class="width-100-p">Thank you for voting!</p>
+        </ng-template>
         <div class="thumbs-top-container">
           <div class="thumb-up">
             <i class="far fa-thumbs-up"></i>
