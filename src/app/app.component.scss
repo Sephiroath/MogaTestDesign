@@ -5,7 +5,7 @@
   display: flex;
   height: $nav-height;
   color: $main-text-color;
-  z-index: 999;
+  z-index: 1;
   max-width: $nav-width;
   margin: 0 auto;
   a {
@@ -62,7 +62,7 @@
   filter: blur(100px);
 }
 .content-container {  
-  position: relative;
+  position: absolute;
   margin-top:-$nav-height;
   width: 100%;
   min-height: $nav-height;

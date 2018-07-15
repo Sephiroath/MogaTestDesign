@@ -79,15 +79,15 @@ $thumbs-height: 70px;
       }
     }
     .thumb-up-container{
-      background-color: rgba(211,211,211,0.3);
+      background-color: $positive-vote-color-faded;
       &:hover{
-        background: rgba(211,211,211,0.7);
+        background: $positive-vote-color;
       }
     }
     .thumb-down-container{
-      background-color: rgba(255, 255, 0, 0.3);
+      background-color: $negative-vote-color-faded;
       &:hover{
-        background: rgba(255, 255, 0, 0.7);
+        background: $negative-vote-color;
       }
     }
   }

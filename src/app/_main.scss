@@ -13,7 +13,13 @@ $main-text-color: white;
 $secondary-text-color: black;
 $lighter-secondary-text-color: gray;
 $message-background-color: #e4e1e1;
-$positive-vote-color: lightseagreen;
-$negative-vote-color:greenyellow;
+$positive-vote-color: rgba(211,211,211,0.7);
+$negative-vote-color:rgba(255, 255, 0, 0.7);
+$positive-vote-color-faded: rgba(211,211,211,0.3);
+$negative-vote-color-faded:rgba(255, 255, 0, 0.3);
 $days-counter-primary-color: gray;
 $days-counter-secondary-color: white;
+
+.width-100-p {
+  width: 100%;
+}

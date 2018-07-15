@@ -1,52 +1,43 @@
 <div class="other-pools-header">
   <h2>Votes</h2>
 </div>
-<div class="main-container">
+<div class="main-other-pools-container">
   <div class="other-poll-container" *ngFor="let poll of polls" [ngStyle]="{ 'background-image': 'url(' + poll.image + ')'}">
-    <div class="poll-container">
+    <div class="poll-content-container">
       <div class="thumb-result">
-        <div class="thumb"></div>
+        <div class="thumb">
+          <div *ngIf="getCurrentVotesPercentage(poll.currentVotesUp+poll.currentVotesDown, poll.currentVotesUp)>=50;else thumb_down">
+            <div class="thumb-up">
+              <i class="far fa-thumbs-up"></i>
+            </div>
+          </div>
+          <ng-template #thumb_down>
+            <div class="thumb-down">
+                <i class="far fa-thumbs-down"></i>              
+            </div>
+          </ng-template>
+        </div>
       </div>
       <div class="poll">
         <h2 class="width-100-p">{{poll.name}}</h2>
-        <p class="width-100-p">{{poll.pollSince}} in {{poll.category}}</p>
+        <p class="width-100-p poll-since">{{poll.pollSince}} in {{poll.category}}</p>
         <p class="width-100-p">{{poll.personDescription}}</p>
         <div class="thumbs-top-container">
-          <div class="thumb-up"></div>
-          <div class="thumb-down"></div>
-          <div class="thumb-vote width-50-p">Vote</div>
+          <div class="thumb-up">
+            <i class="far fa-thumbs-up"></i>
+          </div>
+          <div class="thumb-down">
+            <i class="far fa-thumbs-down"></i>
+          </div>
+          <div class="thumb-vote width-50-p">
+            Vote now
+          </div>
         </div>
       </div>
-      <div class="thumbs-container-bottom height-100-px">
-        <div class="height-100-p thumb-up" [ngStyle]="{ 'width': getCurrentVotesPercentage(poll.currentVotesUp+poll.currentVotesDown, poll.currentVotesUp) + '%'}"></div>
-        <div class="height-100-p thumb-down" [ngStyle]="{ 'width': getCurrentVotesPercentage(poll.currentVotesUp+poll.currentVotesDown, poll.currentVotesDown) + '%'}"></div>
-      </div>
+    </div>
+    <div class="thumbs-container-bottom height-100-px">
+      <div class="height-100-p thumb-up" [ngStyle]="{ 'width': getCurrentVotesPercentage(poll.currentVotesUp+poll.currentVotesDown, poll.currentVotesUp) + '%'}"></div>
+      <div class="height-100-p thumb-down" [ngStyle]="{ 'width': getCurrentVotesPercentage(poll.currentVotesUp+poll.currentVotesDown, poll.currentVotesDown) + '%'}"></div>
     </div>
   </div>
 </div>
-
-<!--
-<div>
-  <div class="other-pools-container">
-    <div class="other-pools-item" *ngFor="let poll of polls" [ngStyle]="{ 'background-image': 'url(' + poll.image + ')'}">
-
-      <div class="thumb-result bg-blue">
-        <div class="thumb bg-red"></div>
-      </div>
-      <div class="poll bg-yellow">
-        <h2 class="width-100-p">Kanye West</h2>
-        <p class="width-100-p">1 month ago in entertainment</p>
-        <p class="width-100-p">vestibulum tortor, nec tempor felis eleifend eu. Nullam vehicula, dolor a blandit mollis, felis augue efficitur leo</p>
-        <div class="thumbs-top-container">
-          <div class="thumb-up bg-yellow"></div>
-          <div class="thumb-down bg-blue"></div>
-          <div  class="thumb-vote width-50-p bg-red">Vote</div>
-        </div>
-      </div>
-      <div class="thumbs-container-bottom height-100-px">
-        <div class="width-50-p bg-red height-100-p"></div>
-        <div class="width-50-p bg-blue height-100-p"></div>    
-      </div>  
-    </div>
-  </div>
-</div>-->
