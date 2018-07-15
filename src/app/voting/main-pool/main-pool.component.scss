@@ -1,9 +1,5 @@
 @import '../../main';
-$background-color: #D4C4B5;
-$content-width: 1000px;
 $content-height: 700px;
-$breakpoint: 799px;
-$higher-breakpoint: 1040px;
 $pool-height: 420px;
 $pool-width: 25%;
 $days-opacity: 0.5;
@@ -17,7 +13,7 @@ $thumbs-height: 70px;
   background-image: url("/assets/PopeFrancis.png");
   background-repeat: no-repeat;
   background-position: top;
-  background-color: $background-color;
+  background-color: $nav-background-alt;
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
